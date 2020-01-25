@@ -7,16 +7,11 @@ import org.springframework.stereotype.Service;
 import java.util.Set;
 
 @Service
-public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements OwnerService {
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override
     public Owner findById(Long id) {
         return super.findById(id);
-    }
-
-    @Override
-    Owner save(Long id, Owner owner) {
-        return super.save(id, owner);
     }
 
     @Override
@@ -31,7 +26,7 @@ public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements O
 
     @Override
     public Owner save(Owner owner) {
-        return save(owner.getId(), owner);
+        return super.save(owner);
     }
 
     @Override

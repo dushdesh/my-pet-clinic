@@ -9,11 +9,6 @@ import java.util.Set;
 @Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
-    Vet save(Long aLong, Vet object) {
-        return super.save(aLong, object);
-    }
-
-    @Override
     Vet deleteById(Long id) {
         return super.deleteById(id);
     }
@@ -30,7 +25,7 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetS
 
     @Override
     public Vet save(Vet vet) {
-        return save(vet.getId(), vet);
+        return super.save(vet);
     }
 
     @Override
