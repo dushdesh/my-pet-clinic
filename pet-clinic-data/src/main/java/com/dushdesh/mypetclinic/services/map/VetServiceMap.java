@@ -1,11 +1,12 @@
 package com.dushdesh.mypetclinic.services.map;
 
 import com.dushdesh.mypetclinic.models.Vet;
-import com.dushdesh.mypetclinic.services.CrudService;
 import com.dushdesh.mypetclinic.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     Vet save(Long aLong, Vet object) {
