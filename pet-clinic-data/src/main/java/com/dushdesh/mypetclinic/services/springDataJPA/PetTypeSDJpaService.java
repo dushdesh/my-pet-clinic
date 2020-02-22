@@ -4,12 +4,14 @@ import com.dushdesh.mypetclinic.models.PetType;
 import com.dushdesh.mypetclinic.repositories.PetTypeRepository;
 import com.dushdesh.mypetclinic.services.PetTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
 
 @Service
+@Profile("springdatajpa")
 public class PetTypeSDJpaService implements PetTypeService {
 
     private final PetTypeRepository petTypeRepository;
