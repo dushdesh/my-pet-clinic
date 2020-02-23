@@ -1,16 +1,17 @@
 package com.dushdesh.mypetclinic.services.map;
 
 import com.dushdesh.mypetclinic.models.Owner;
-import com.dushdesh.mypetclinic.models.Pet;
 import com.dushdesh.mypetclinic.services.OwnerService;
 import com.dushdesh.mypetclinic.services.PetService;
 import com.dushdesh.mypetclinic.services.PetTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
     private final PetService petService;
     private final PetTypeService petTypeService;
